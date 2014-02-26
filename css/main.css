@@ -1,0 +1,28 @@
+body {
+	font-family: Arial;
+}
+
+h1 {
+	color: #666;
+}
+
+.toolholder p {
+	color: #999;
+}
+
+button {
+	cursor: pointer;
+}
+
+.folderBrowseInput {
+	display:none;
+}
+
+.folderBrowseButton {
+	display:inline-block; 
+	margin:10px 5px 0 0;
+}
+
+.alertText {
+	color: #FF6600 !important;
+}
