@@ -5,6 +5,10 @@
 .orb-footer-grey, .orb-footer-grey .orb-footer-inner, .orb-footer-grey .orb-footer-inner a, .orb-footer-grey {
 	border-color: #949494;
 }
+.orb-footer a:hover {
+	color:#fff;
+	text-decoration: underline;
+}
 .orb-footer aside {
 	display:block;
 }
