@@ -10,7 +10,9 @@
     "connect": "latest",
     "open": "latest",
     "ncp": "0.5.0",
-    "rimraf": "2.2.6"
+    "rimraf": "2.2.6",
+    "gm": "latest",
+    "async": "latest"
   },
   "window": {
     "toolbar": true,
