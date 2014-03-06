@@ -1,3 +1,161 @@
+.bbc_shorthand_footer {
+    /* Remove these lines if needed */
+    font-family: Arial, serif;
+    font-size: 14px;
+    max-width: 944px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+    position:static;
+}
+
+.bbc_shorthand_footer * {
+	position:static;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* Proper CSS */
+
+.bbc_shorthand_footer h2 {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 0.5em 0;
+}
+
+.bbc_shorthand_footer h3 {
+    font-weight: bold;
+    font-size: 1.4em;
+    border-bottom: 1px solid black;
+}
+
+.bbc_shorthand_footer div {
+    padding: 20px 0;
+    margin: 0 30px;
+}
+
+.bbc_shorthand_footer-credits {
+    width: 60%;
+    float: left;
+}
+
+    .bbc_shorthand_footer-credits dt {
+        font-weight: bold;
+        width: 12em;
+        float: left;
+    }
+
+    .bbc_shorthand_footer-credits dd {
+        margin-left: 12em;  /* SAME AS .bbc_shorthand_footer-credits dt WIDTH */
+        margin-bottom: 0.3em;
+    }
+
+.bbc_shorthand_footer-share {
+    width: 25%;
+    float: right;
+    padding:20px 0;
+}
+
+.bbc_shorthand_footer-more {
+    clear: both;
+    background-color: #EDEDED;
+    margin:0!important;
+    padding:20px 30px!important;
+}
+
+    .bbc_shorthand_footer-more ul {
+        padding: 0;
+    }
+
+    .bbc_shorthand_footer-more li {
+        display: inline-block;
+        vertical-align: top;
+        width: 31%;
+        margin-right: 1em;
+    }
+
+    .bbc_shorthand_footer-more li:last-child {
+        margin: 0;
+    }
+
+    .bbc_shorthand_footer-more li img {
+        display: block;
+        width: 100%;
+    }
+
+    .bbc_shorthand_footer-more li span {
+        display: block;
+        font-size: 1.3em;
+        padding: 15px;
+        background-color: #CF0000;
+    } 
+
+    .bbc_shorthand_footer-more li a {
+        color: white;
+        text-decoration: none;
+    } 
+
+    .bbc_shorthand_footer-more li a:hover {
+        color: orange; /* or whatever */
+    }
+
+
+/* ------------------------------------------------------------------------- Responsiveness */
+
+@media (max-width: 850px) {
+    .bbc_shorthand_footer-credits, .bbc_shorthand_footer-share {
+        float: none;
+        width: 90%;
+    }
+}
+
+@media (max-width: 624px) {
+
+    /* Reduce credit margins */
+    .bbc_shorthand_footer-credits dt {
+        width: 9em;
+    }
+    .bbc_shorthand_footer-credits dd {
+        margin-left: 9em;
+    }
+
+    /* Show list betterer */
+    .bbc_shorthand_footer-more li { 
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    .bbc_shorthand_footer-more li img {
+        width: 47%;
+    }
+
+    .bbc_shorthand_footer-more li span {
+        width: 47%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+
+@media (max-width: 404px) {
+    .bbc_shorthand_footer-credits dt {
+        float: none;
+        margin-top: 0.5em;
+    }
+    .bbc_shorthand_footer-credits dd {
+        margin-left: 1em;
+    }
+}
+
+/* ------------------------------- share tools -- */
+.ns__share{overflow:hidden;clear:both;padding:0!important;margin:0!important;zoom:1;list-style:none;font-family:sans-serif;}.ns__share .share__title{font-size:24px}.ns__share .share__title a{letter-spacing:normal;font-weight:normal;font-size:.5em}.ns__share .share__tools{margin:0.5em -0.25em;overflow:hidden;zoom:1}.ns__share ul li.share__tool{background-image:none;padding:0px;margin-right:0.25em;margin-left:0.25em}.ns__share .share__tool{float:left;margin-bottom:0.5em;width:100%;padding-left:0.25em;padding-right:0.25em;box-sizing:border-box}.ns__share .share__tool a{background-color:#615f5d;display:block;height:40px;overflow:hidden;text-align:center;font-size:16px;line-height:40px;font-weight:bold;color:#fff}.ns__share .share__tool a span{display:block}.ns__share .share__tool--facebook a,.ns__share .share__tool--twitter a{background:#615f5d url("http://news.bbcimg.co.uk/news/special/2014/newsspec_6862/english/css/f/share_tools.png") no-repeat}.ns__share .share__tool--facebook a span,.ns__share .share__tool--twitter a span{text-indent:-5000px}.ns__share .share__tool--facebook a{background-color:#3c5a98;background-position:center -106px}.ns__share .share__tool--facebook a:hover{background-color:#4e71b9}.ns__share .share__tool--twitter a{background-color:#47c7fa;background-position:center -148px}.ns__share .share__tool--twitter a:hover{background-color:#79d6fb}.ns__share .share__tool--email a{text-decoration:none;padding-top:14px;padding-bottom:4px;height:22px;line-height:1}.ns__share .share__tool--email a span{display:inline;color:#fff;font-size:1em;font-weight:bold;padding:3px 0 3px 28px;background:transparent url("http://news.bbcimg.co.uk/news/special/2014/newsspec_6862/english/css/f/share_tools.png") 0px 2px no-repeat}.ns__share .share__tool--email a:hover{text-decoration:none;background-color:#7b7976}@media (max-width: 849px){.ns__share .share__tool{width:30%}}.ns__desktop .ns__share .share__title{padding-top:12px;padding-right:16px;float:left}.ns__desktop .ns__share .share__tools{padding-top:6px;margin:0;float:left}.ns__desktop .ns__share .share__tool{width:25px}.ns__desktop .ns__share .share__tool a{height:25px}.ns__desktop .ns__share .share__tool--facebook a{background-position:0px -42px}.ns__desktop .ns__share .share__tool--facebook a:hover{background-color:#3c5a98;background-position:0px -67px}.ns__desktop .ns__share .share__tool--twitter a{background-position:-24px -42px}.ns__desktop .ns__share .share__tool--twitter a:hover{background-color:#47c7fa;background-position:-24px -67px}.ns__desktop .ns__share .share__tool--email{width:100px}.ns__desktop .ns__share .share__tool--email a{text-decoration:none;padding-top:4px;padding-bottom:8px;height:13px;line-height:1}.ns__desktop .ns__share .share__tool--email a span{font-size:0.95em;font-weight:normal;background-position:0px 3px}.ns__desktop .ns__share .share__tool--email a:hover{text-decoration:none;background-color:#7b7976}
+
+/*--------------END OF PRE FOOTER-----------------*/
 #orb-footer {
 	font-size:65%;
 	font-family:Arial,Helvetica,freesans,sans-serif;

@@ -12,7 +12,8 @@
     "ncp": "0.5.0",
     "rimraf": "2.2.6",
     "gm": "latest",
-    "async": "latest"
+    "async": "latest",
+    "css-parse": "latest"
   },
   "window": {
     "toolbar": true,
