@@ -6,6 +6,13 @@ chooseOutputDir = require('chooseOutputFolder'),
 copyInputIntoOutput = require('copyInputIntoOutput'),
 setableOptions = require('setableOptions'),
 processArticle = require('processArticle'),
+removeGoogleAnalyticsTask = require('removeGoogleAnalyticsTask'),
+addiStatsTask = require('addiStatsTask'),
+addChartbeatTask = require('addChartbeatTask'),
+bbcHeaderTask = require('bbcHeaderTask'),
+bbcFooterTask = require('bbcFooterTask'),
+addShareToolsTask = require('addShareToolsTask'),
+responsiveImagesTask = require('responsiveImagesTask');
 model = require('model');
 
 /*------------------------------------------------------------------
@@ -32,6 +39,13 @@ model.stateMachine.addTransition(model.appStates.CHOOSE_OUTPUT_DIRECTORY,		[mode
 model.stateMachine.addTransition(model.appStates.COPY_INPUT_INTO_OUTPUT,		[model.appStates.CHOOSE_OUTPUT_DIRECTORY],	copyInputIntoOutput.go);
 model.stateMachine.addTransition(model.appStates.DISPLAY_CHANGE_OPTIONS,		[model.appStates.COPY_INPUT_INTO_OUTPUT],	setableOptions.promptUserForOptions);
 model.stateMachine.addTransition(model.appStates.PROCESS_ARTICLE,				[model.appStates.DISPLAY_CHANGE_OPTIONS],	processArticle.go);
+
+//add the process tasks states from the model
+var a, arrLength = model.processTasks.length;
+for (a = 0; a < arrLength; a++) {
+	var taskObj = model.processTasks[a];
+	model.stateMachine.addTransition(taskObj.stateName, taskObj.acceptableStates, taskObj.stateMethod);
+}
 
 /*------------------------------------------------------------------
 * ACTIONS

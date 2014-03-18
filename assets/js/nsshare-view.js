@@ -20,6 +20,7 @@ define(['bootstrap'], function (news) {
     var requestShare = function (ev) {
         ev.preventDefault();
         ev.stopPropagation();
+
         news.pubsub.emitEvent('ns:share:call');
         if (news.$(ev.currentTarget).hasClass('share__tool--email')) {
             news.pubsub.emitEvent('ns:share:call:email');
@@ -38,14 +39,27 @@ define(['bootstrap'], function (news) {
     var NSShareView = function (target) {
         // Instanstiate a new Template Engine
         // Attach the Template.tmpl prototype to the view
+
         this.sharemodule = news.$(target);
         this.viewReady = false;
         // Personal share request
+        news.pubsub.addListener('ns:request:personalshare',
+            news.$.proxy(this.buildShareModule, this));
         news.pubsub.addListener('ns:request:launchshare',
             news.$.proxy(function (target) {
                 this.shareWindow(target, 'NSShareWindow', 500, 300, 'no');
             }, this)
         );
+    };
+
+    NSShareView.prototype.buildShareModule = function (model) {
+        //this.sharemodule.on('click', '.share__tool', requestShare);
+        $('.share__tool').click(requestShare);
+
+        // inform controller
+        this.viewReady = true;
+        news.pubsub.emitEvent('ns:module:ready');
+
     };
     
     /**
@@ -67,19 +81,19 @@ define(['bootstrap'], function (news) {
     * @param {String} scroll - Allow scrollbar
     */
     NSShareView.prototype.shareWindow = function (url, winName, width, height, scroll) {
-        // var popupWindow, 
-        //     leftPosition = (screen.width) ? (screen.width - width) / 2 : 0,
-        //     topPosition = (screen.height) ? (screen.height - height) / 2 : 0,
-        //     settings = 'height=' + height + 
-        //     ',width=' + width + 
-        //     ',top=' + topPosition + 
-        //     ',left=' + leftPosition + 
-        //     ',scrollbars=' + scroll + 
-        //     ',resizable';
-        // popupWindow = window.open(url, winName, settings);
-        var left = (screen.width/2)-(width/2);
-        var top = (screen.height/2)-(height/2);
-        var popupWindow = window.open(url, winName, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+        var popupWindow, 
+            leftPosition = (screen.width) ? (screen.width - width) / 2 : 0,
+            topPosition = (screen.height) ? (screen.height - height) / 2 : 0,
+            settings = 'height=' + height + 
+            ',width=' + width + 
+            ',top=' + topPosition + 
+            ',left=' + leftPosition + 
+            ',scrollbars=' + scroll + 
+            ',resizable';
+        popupWindow = window.open(url, winName, settings);
+        // var left = (screen.width/2)-(width/2);
+        // var top = (screen.height/2)-(height/2);
+        // var popupWindow = window.open(url, winName, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
     };
 
     return NSShareView;

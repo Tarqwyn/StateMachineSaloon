@@ -10,7 +10,7 @@
 
 /** @module nsshare-model */
 define(['bootstrap'], function (news) {
-    var STORY_PAGE_URL = window.location.href || 'www.bbc.co.uk/news',
+    var STORY_PAGE_URL = 'www.bbc.co.uk/news',
         FACEBOOK_URL = 'https://www.facebook.com/dialog/feed',
         BBC_FB_APP_ID = '58567469885',
         BBC_SHARE_TOOLS_URL = 'http://www.bbc.co.uk/modules/sharetools/callback',
@@ -49,7 +49,7 @@ define(['bootstrap'], function (news) {
     * @param {String} image - URL location of a associated share image - maps to Open Graph Protocol
     * @param {String} message - Personalised message to share via Facebook/Twitter
     */
-    var NSShareModel = function (config) {     
+    var NSShareModel = function (config) {  
         var opts = config || {};
         if (opts.hashtag) {
             if (typeCheck(opts.hashtag, 'object')) {
@@ -236,6 +236,9 @@ define(['bootstrap'], function (news) {
     * @returns {URLString} Facebook share request URL
     */
     NSShareModel.prototype.fbShareTarget = function () {
+
+        console.log("this.getOGPImage() = ", this.getOGPImage());
+
         return FACEBOOK_URL + // FACEBOOK URL
         '?app_id=' + BBC_FB_APP_ID + // via BBC APP id
         '&redirect_uri=' + encodeURIComponent(BBC_SHARE_TOOLS_URL) + // Sharetools locations encoded for Query string
@@ -243,7 +246,7 @@ define(['bootstrap'], function (news) {
         '&display=popup' + // Share window type
         '&link=' + STORY_PAGE_URL + // URL storypage
         '&name=' + this.getShareMessage() + // Custom share message
-        '%20' + this.getHashTags() + // Hashtags string
+        // '%20' + this.getHashTags() + // Hashtags string
         //'&locale=' + LOCALE + //location - May not be needed - Share module seems only to support en_GB which it applies by default anyway??
         '&description=' + this.getOGPDescription() + // Open Graph Protocol Description
         '&picture=' + this.getOGPImage(); // Open Graph Protocol Image
@@ -257,7 +260,7 @@ define(['bootstrap'], function (news) {
     NSShareModel.prototype.twitterShareTarget = function () {
         return TWITTER_URL + // Twitter API
         '?text=' + this.getShareMessage() + // Custom share message
-        ' ' + this.getHashTags() + // Hashtags string
+        // ' ' + this.getHashTags() + // Hashtags string
         ' ' + STORY_PAGE_URL; // URL storypage
     };
     /**
