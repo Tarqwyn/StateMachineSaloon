@@ -10,7 +10,7 @@
 
 /** @module nsshare-model */
 define(['bootstrap'], function (news) {
-    var STORY_PAGE_URL = 'www.bbc.co.uk/news',
+    var STORY_PAGE_URL = 'www.bbc.co.uk/news/magazine-26793157',
         FACEBOOK_URL = 'https://www.facebook.com/dialog/feed',
         BBC_FB_APP_ID = '58567469885',
         BBC_SHARE_TOOLS_URL = 'http://www.bbc.co.uk/modules/sharetools/callback',
