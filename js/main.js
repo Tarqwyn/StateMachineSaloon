@@ -9,10 +9,8 @@ processArticle = require('processArticle'),
 removeGoogleAnalyticsTask = require('removeGoogleAnalyticsTask'),
 addiStatsTask = require('addiStatsTask'),
 addChartbeatTask = require('addChartbeatTask'),
-bbcHeaderTask = require('bbcHeaderTask'),
 bbcFooterTask = require('bbcFooterTask'),
 addShareToolsTask = require('addShareToolsTask'),
-responsiveImagesTask = require('responsiveImagesTask');
 model = require('model');
 
 /*------------------------------------------------------------------
@@ -30,15 +28,15 @@ model.eventEmitter.addListener(model.emitterEvents.ERROR, throwError);
 /*------------------------------------------------------------------
 * STATE MACHINE TRANSITIONS
 ------------------------------------------------------------------*/
-model.stateMachine.addTransition(model.appStates.ERROR_STATE,					['*'],										errorScreen.displayWhoops);
+model.stateMachine.addTransition(model.appStates.ERROR_STATE,					['*'],											errorScreen.displayWhoops);
 model.stateMachine.addTransition(model.appStates.START,							[model.appStates.IDLE,
-																				model.appStates.ERROR_STATE],				startScreen.promptUserForShortHandDir);
-model.stateMachine.addTransition(model.appStates.CHECK_SHORTHAND_FOLDER,		[model.appStates.START],					checkShortHandDirectory.sanityCheckDirectoryandContents);
+																					model.appStates.ERROR_STATE],				startScreen.promptUserForShortHandDir);
+model.stateMachine.addTransition(model.appStates.CHECK_SHORTHAND_FOLDER,		[model.appStates.START],						checkShortHandDirectory.sanityCheckDirectoryandContents);
 model.stateMachine.addTransition(model.appStates.CHOOSE_OUTPUT_DIRECTORY,		[model.appStates.CHECK_SHORTHAND_FOLDER,
-																				model.appStates.COPY_INPUT_INTO_OUTPUT],	chooseOutputDir.promptUserForOutputDir);
-model.stateMachine.addTransition(model.appStates.COPY_INPUT_INTO_OUTPUT,		[model.appStates.CHOOSE_OUTPUT_DIRECTORY],	copyInputIntoOutput.go);
-model.stateMachine.addTransition(model.appStates.DISPLAY_CHANGE_OPTIONS,		[model.appStates.COPY_INPUT_INTO_OUTPUT],	setableOptions.promptUserForOptions);
-model.stateMachine.addTransition(model.appStates.PROCESS_ARTICLE,				[model.appStates.DISPLAY_CHANGE_OPTIONS],	processArticle.go);
+																					model.appStates.COPY_INPUT_INTO_OUTPUT],	chooseOutputDir.promptUserForOutputDir);
+model.stateMachine.addTransition(model.appStates.COPY_INPUT_INTO_OUTPUT,		[model.appStates.CHOOSE_OUTPUT_DIRECTORY],		copyInputIntoOutput.go);
+model.stateMachine.addTransition(model.appStates.DISPLAY_CHANGE_OPTIONS,		[model.appStates.COPY_INPUT_INTO_OUTPUT],		setableOptions.promptUserForOptions);
+model.stateMachine.addTransition(model.appStates.PROCESS_ARTICLE,				[model.appStates.DISPLAY_CHANGE_OPTIONS],		processArticle.go);
 
 //add the process tasks states from the model
 var a, arrLength = model.processTasks.length;
@@ -58,13 +56,3 @@ function throwError(msg) {
 * LET'S GET STARTED!
 ------------------------------------------------------------------*/
 model.stateMachine.publishStateChange(model.appStates.START);
-
-///Users/bangar01/Desktop/story-118-20140110200113
-
-
-/*------------------------------------------------------------------
-* GENERAL CSS CHANGES:
-	* chnage the font face settings to this:
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-weight: 300;
-------------------------------------------------------------------*/

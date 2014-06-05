@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------------- Footer panel */
+
 .bbc_shorthand_footer {
     /* Remove these lines if needed */
     font-family: Arial, serif;
@@ -16,7 +18,14 @@
 	box-sizing: content-box;
 }
 
-/* Proper CSS */
+.bbc_shorthand_footer a {
+	color: #cc0101;
+	font-weight: bold;
+}
+
+.bbc_shorthand_footer a:hover {
+	text-decoration: underline;
+}
 
 .bbc_shorthand_footer h2 {
     font-weight: bold;
