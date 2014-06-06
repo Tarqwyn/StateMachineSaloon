@@ -1,0 +1,72 @@
+<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js">
+</script>
+<script type="text/javascript">
+	bbcRequireMap = {
+		"jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
+		"swfobject-2":"http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2",
+		"bump-3":"http://emp.bbci.co.uk/emp/bump-3/bump-3"
+	}
+	require({ paths: bbcRequireMap, waitSeconds: 30 });
+	require(['bump-3'],function ($mp) {
+		var settings = {
+			product : 'news',
+			playerProfile: 'smp',
+			responsive: true
+		};
+		var smpVidsController = {};
+		{{#mediaPlayersInit}}
+
+		var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+		if (isMobileDevice) {
+			return;
+		}
+		var scrollTimer;
+		$(window).on('scroll', function(e) {
+			if (scrollTimer) { clearTimeout(scrollTimer); }
+			scrollTimer = setTimeout(function() {
+				$(window).trigger('fooscroll');
+			}, 200);
+		});
+		$(window).on('fooscroll', function() {
+			var docViewTop = $(window).scrollTop(), docViewBottom = docViewTop + $(window).height(), docViewHeight = docViewBottom - docViewTop, viewThreshold = docViewHeight * 0.4;
+			var a;
+			for (a = 0; a < {{#vidsLength}}; a++) {
+				var elem = $('#mediaPlayerFullWidth' + a) || $('#mediaPlayer' + a);
+				var elemTop = elem.offset().top;
+				var elemBottom = elemTop + elem.height();
+				var inView = (elemTop < (docViewBottom - viewThreshold)) && (elemBottom > (docViewTop + viewThreshold));
+				var vidControllerObj = smpVidsController[elem.attr('id')];
+				var playerInstance = vidControllerObj.mp;
+				var currentTime = playerInstance.currentTime();
+				var vidPaused = playerInstance.paused();
+
+				if (!vidControllerObj.userPaused && !vidControllerObj.autoPaused && vidPaused) {
+					vidControllerObj.userPaused = true;
+				}
+				if (vidControllerObj.userPaused && vidControllerObj.autoPaused && !vidPaused) {
+					vidControllerObj.userPaused = false;
+				}
+
+				//user paused state
+				if (inView && vidPaused && !vidControllerObj.autoPaused) {
+					vidControllerObj.userPaused = true;
+				}
+				if (!vidPaused) {
+					vidControllerObj.userPaused = false;
+				}
+
+				//auto paused state
+				vidControllerObj.autoPaused = !inView;
+
+				//play or pause video
+				// if (inView && !vidControllerObj.userPaused && !playerInstance.ended()) {
+				// 	playerInstance.play();
+				// }
+				if (!inView) {
+					playerInstance.pause();
+				}
+			}
+		});
+	});
+</script>
