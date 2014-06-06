@@ -36,13 +36,19 @@ OR in finder click on node-webkit.app
 - Prompt for setable options:
 	
 	. remove google analytics
+
 	. add istats
+
 	. add chartbeat
+
 	. add bbc (smp) video
+
 	. add bbc quotes
+
 	. add bbc footer
+
 	. add share tools
 
--run selected tasks
+- Run selected tasks
 
 
