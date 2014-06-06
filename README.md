@@ -13,7 +13,7 @@ The producers guide explains how to construct pieces of content like the bbc quo
 
 - Clone the repository
 
- -In the project open the file 'assets/markup/bbcFooter.html' and edit it to reflect the new story details
+- In the project open the file 'assets/markup/bbcFooter.html' and edit it to reflect the new story details
 
 - From terminal cd into the project directory and type:
 
@@ -21,7 +21,7 @@ The producers guide explains how to construct pieces of content like the bbc quo
 
 OR in finder click on node-webkit.app
 
--follow the instructions
+- Follow the instructions
 
 ### Things the tool does
 
@@ -35,13 +35,13 @@ OR in finder click on node-webkit.app
 
 - Prompt for setable options:
 	
-	.remove google analytics
-	.add istats
-	.add chartbeat
-	.add bbc (smp) video
-	.add bbc quotes
-	.add bbc footer
-	.add share tools
+	. remove google analytics
+	. add istats
+	. add chartbeat
+	. add bbc (smp) video
+	. add bbc quotes
+	. add bbc footer
+	. add share tools
 
 -run selected tasks
 
