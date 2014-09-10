@@ -29,7 +29,7 @@ model = new NSShareModel({
     desc: "Shared via BBC News Magazine",
     image: "http://www.bbc.co.uk/news/special/2014/newsspec_6954/static/img/mbaye225.jpg"
 });
-model.storyPageUrl = "http://www.bbc.co.uk/news/magazine-26793157";
+model.storyPageUrl = "http://www.bbc.co.uk/news/magazine-26354918";
 view = new NSShareView('#ns_share_module');
 news.pubsub.addListener('ns:module:ready', _initialiseModule);
 news.pubsub.emitEvent('ns:request:personalshare', [model]);

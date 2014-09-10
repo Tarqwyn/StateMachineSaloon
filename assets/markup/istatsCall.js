@@ -9,8 +9,8 @@
 					currentSectionNumber = i;
 						try {
 							istatsGlobal.log(
-								'sectionView',
-								'shorthand.sectionView',
+								'section-view',
+								'newsspec-nonuser',
 								{
 									'time':Date.now(),
 									'section': i

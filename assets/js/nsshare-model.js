@@ -4,17 +4,17 @@
 * for Facebook, Twitter and Email
 * @requires bootstrap
 * @todo Implement other sharing environments i.e. Google+ and add them to the model.
-* @author BBC / Steven Atherton 
+* @author BBC / Steven Atherton
 * @version RC1
 */
 
 /** @module nsshare-model */
 define(['bootstrap'], function (news) {
-    var STORY_PAGE_URL = 'www.bbc.co.uk/news/magazine-26793157',
+    var STORY_PAGE_URL = 'www.bbc.co.uk/news/magazine-26354918',
         FACEBOOK_URL = 'https://www.facebook.com/dialog/feed',
         BBC_FB_APP_ID = '58567469885',
         BBC_SHARE_TOOLS_URL = 'http://www.bbc.co.uk/modules/sharetools/callback',
-        // TODO collect location for WorldService 
+        // TODO collect location for WorldService
         // Does worldservice have a global window object describing service??
         // LOCALE = 'en_GB', // See note in fbShareTarget
         TWITTER_URL = 'https://twitter.com/intent/tweet',
@@ -49,22 +49,22 @@ define(['bootstrap'], function (news) {
     * @param {String} image - URL location of a associated share image - maps to Open Graph Protocol
     * @param {String} message - Personalised message to share via Facebook/Twitter
     */
-    var NSShareModel = function (config) {  
+    var NSShareModel = function (config) {
         var opts = config || {};
         if (opts.hashtag) {
             if (typeCheck(opts.hashtag, 'object')) {
                 for (var i = hashtag.length - 1; i >= 0; i--) {
                     this.addHashTag(hashtag[i]);
                 }
-            } 
-        } 
+            }
+        }
         // else {
-        //     this.addHashTag('BBCNewsGraphics'); 
+        //     this.addHashTag('BBCNewsGraphics');
         // }
         if (opts.header) {this.setHeader(opts.header); } else { this.setHeader('Share this page'); }
         if (opts.app) {this.setAppId(opts.app); } else {this.setAppId('PersonalSharing'); }
         if (opts.desc) {this.setOGPDescription(opts.desc); } else {this.setOGPDescription('Shared via BBC News'); }
-        if (opts.image) {this.setOGPImage(opts.image); } else {this.setOGPImage('http://newsimg.bbc.co.uk/media/images/67373000/jpg/_67373987_09f1654a-e583-4b5f-bfc4-f05850c6d3ce.jpg'); }       
+        if (opts.image) {this.setOGPImage(opts.image); } else {this.setOGPImage('http://newsimg.bbc.co.uk/media/images/67373000/jpg/_67373987_09f1654a-e583-4b5f-bfc4-f05850c6d3ce.jpg'); }
         if (opts.message) {this.setShareMessage(opts.message); } else {this.setShareMessage('BBC Interactives'); }
     };
 
@@ -271,7 +271,7 @@ define(['bootstrap'], function (news) {
     */
     NSShareModel.prototype.emailShareTarget = function () {
         return EMAIL_URL + // Email
-        '?subject=' + 'Shared%20from%20BBC%20News' + 
+        '?subject=' + 'Shared%20from%20BBC%20News' +
         '&body=' + this.getShareMessage() + // Custom share message
         '%20' + STORY_PAGE_URL; // URL storypage
     };
