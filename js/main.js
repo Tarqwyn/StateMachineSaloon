@@ -11,6 +11,7 @@ addiStatsTask = require('addiStatsTask'),
 addChartbeatTask = require('addChartbeatTask'),
 bbcFooterTask = require('bbcFooterTask'),
 addShareToolsTask = require('addShareToolsTask'),
+createHeaderIncludeTask = require('createHeaderIncludeTask'),
 model = require('model');
 
 /*------------------------------------------------------------------
