@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'bbc_quote';
-	src: url('../fonts/bbc_quote.eot?43705565');
-	src: url('../fonts/bbc_quote.eot?43705565#iefix') format('embedded-opentype'),
-		url('../fonts/bbc_quote.woff?43705565') format('woff'),
-		url('../fonts/bbc_quote.ttf?43705565') format('truetype'),
-		url('../fonts/bbc_quote.svg?43705565#bbc_quote') format('svg');
+	src: url('fonts/bbc_quote.eot?43705565');
+	src: url('fonts/bbc_quote.eot?43705565#iefix') format('embedded-opentype'),
+		url('fonts/bbc_quote.woff?43705565') format('woff'),
+		url('fonts/bbc_quote.ttf?43705565') format('truetype'),
+		url('fonts/bbc_quote.svg?43705565#bbc_quote') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -37,4 +37,97 @@
 	font-weight: normal;
 	padding-left:50px;
 	line-height: 1.3;
+
 }
+/*--------------Orb intergration-----------------*/
+
+.orb-nav-pri-container * {
+	position: static;
+}
+
+
+.orb-nav-blocks a:hover {
+	border-bottom: none;
+}
+
+#orb-search-button {
+	-moz-box-sizing: initial;
+	-webkit-box-sizing: initial;
+	box-sizing: initial;
+	float: right
+}
+
+.navigation {
+	width: 100%;
+	height: 38px;
+	background-color: #2c2c2c;
+	background-color: rgba(44,44,44,0.9);
+	position: fixed;
+	top: 40px;
+}
+
+.section-navigation {
+	height: 38px;
+	top: 0;
+	position: static!important;
+	background-color: transparent!important;
+	max-width: 976px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right!important;
+	padding-left: 0!important;
+
+	background-image: url(/img/news.png);
+	background-repeat: no-repeat;
+	background-size: 90px;
+	background-position-x: 15px;
+	background-position-y: 7px;
+}
+
+@media (max-width: 1100px) {
+.story .section-header {
+	top: 40px!important;
+	background-image: url(/img/news.png);
+	background-repeat: no-repeat;
+	background-size: 90px;
+	background-position-x: 15px;
+	background-position-y: 7px;
+}
+}
+
+
+@media (max-width: 624px) {
+.story .section-header {
+	top: 32px!important;
+}
+}
+
+@media (max-width: 1100px) {
+.story .section-navigation {
+	top: 78px!important;
+	position: fixed!important;
+	text-align: left!important;
+	background-image: none;
+}	
+}
+
+@media (max-width: 1100px) {
+.navigation {
+	background-color: transparent;
+}
+}
+
+.header-logo-panel img {
+	display: none;
+}
+
+.nav__progress-stuck {
+	top: 0px!important;
+}
+
+@media (max-width: 1100px) {
+	.story .section-header.nav__progress-stuck {
+		top: 0px!important;
+	}
+}
+

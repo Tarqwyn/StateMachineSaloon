@@ -4,8 +4,7 @@
 // Here we could define other dependencies that may be require specifically by our application
 // for example rapheal or a pubsub module..
 define([
-    // '../../lib/jquery',
-    '../../lib/event_emitter'
+    'lib/event_emitter'
 ], function (
     // jquery,
     EventEmitter
