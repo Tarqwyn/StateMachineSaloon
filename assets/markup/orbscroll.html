@@ -1,0 +1,37 @@
+<!-- Orb scroll code - start -->
+<script type="text/javascript">
+var progressbar =  $('.navigation'),
+    secondarybar = $('.section-header'),
+    navmore,
+    stickposition = 38,
+    userLang = document.documentElement.lang;
+
+
+    if ($('.orb-dir-rtl').length > 0) {
+      navmore = $('#orb-nav-more');
+      navmore.css('max-width', '109px');
+    } else if (userLang === 'hi-IN' || userLang === 'vi-VN' || userLang === 'tr-TR') {
+      navmore = $('#orb-nav-more');
+      navmore.css('max-width', '102px');
+    }
+    
+    if (!window.requestAnimationFrame) {
+      $(window).scroll(function (e) {
+          stickChapterBar();
+      });
+    } else {
+      window.requestAnimationFrame(stickChapterBar);
+    }
+
+
+    function stickChapterBar () {
+      var scrolltop = $(window).scrollTop();
+      progressbar.toggleClass('nav__progress-stuck', scrolltop > stickposition);
+      secondarybar.toggleClass('nav__progress-stuck', scrolltop > stickposition);
+      if (window.requestAnimationFrame) {
+        window.requestAnimationFrame(stickChapterBar);
+      }
+    }
+
+</script>
+<!-- Orb scroll code - end -->

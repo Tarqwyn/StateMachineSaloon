@@ -9,8 +9,10 @@ processArticle = require('processArticle'),
 removeGoogleAnalyticsTask = require('removeGoogleAnalyticsTask'),
 addiStatsTask = require('addiStatsTask'),
 addChartbeatTask = require('addChartbeatTask'),
+addOrbScrollTask = require('addOrbScrollTask'),
 bbcFooterTask = require('bbcFooterTask'),
 addShareToolsTask = require('addShareToolsTask'),
+securityCheckTask = require('securityCheckTask'),
 createHeaderIncludeTask = require('createHeaderIncludeTask'),
 model = require('model');
 
