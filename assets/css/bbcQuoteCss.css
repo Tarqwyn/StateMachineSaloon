@@ -57,6 +57,18 @@
 	float: right
 }
 
+#orb-footer {
+	font-size: 100%!important;
+}
+
+.orb-footer-primary-links ul li a:hover {
+	border-bottom: none;
+}
+
+.orb-footer-lead {
+	color:#ffffff;
+}
+
 .navigation {
 	width: 100%;
 	height: 38px;

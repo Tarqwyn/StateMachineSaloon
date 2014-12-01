@@ -13,12 +13,12 @@
     "rimraf": "2.2.6",
     "gm": "latest",
     "async": "latest",
-    "css-parse": "latest"
+    "css-parse": "latest",
   },
   "window": {
     "toolbar": true,
     "resizable": true,
     "width":600,
-    "height":550
+    "height":600
   }
 }

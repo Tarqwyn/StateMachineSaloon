@@ -2,8 +2,19 @@
 <script type="text/javascript">
 var progressbar =  $('.navigation'),
     secondarybar = $('.section-header'),
-    stickposition = 38;
+    navmore,
+    stickposition = 38,
+    userLang = document.documentElement.lang;
 
+
+    if ($('.orb-dir-rtl').length > 0) {
+      navmore = $('#orb-nav-more');
+      navmore.css('max-width', '109px');
+    } else if (userLang === 'hi-IN' || userLang === 'vi-VN' || userLang === 'tr-TR') {
+      navmore = $('#orb-nav-more');
+      navmore.css('max-width', '102px');
+    }
+    
     if (!window.requestAnimationFrame) {
       $(window).scroll(function (e) {
           stickChapterBar();
