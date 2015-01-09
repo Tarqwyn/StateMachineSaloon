@@ -3,17 +3,21 @@
 var progressbar =  $('.navigation'),
     secondarybar = $('.section-header'),
     navmore,
-    stickposition = 38,
-    userLang = document.documentElement.lang;
+    stickposition = 38;
 
-
-    if ($('.orb-dir-rtl').length > 0) {
-      navmore = $('#orb-nav-more');
-      navmore.css('max-width', '109px');
-    } else if (userLang === 'hi-IN' || userLang === 'vi-VN' || userLang === 'tr-TR') {
-      navmore = $('#orb-nav-more');
-      navmore.css('max-width', '102px');
-    }
+    if (detectOrb()) {
+      addShorthandInOrbClasses();
+      $('#orb-nav-more').on('click', function () {
+        $('.menu-overlay__orb').removeClass('show-with-menu');
+        $('.section-navigation__orb').addClass('hide-when-small');
+        $('.section-header__orb').removeClass('menu-active');
+        timeoutID = window.setTimeout(function () {
+          $('.section-navigation__orb').css('top', $($('.section-header__orb')[0]).offset().top + 38 + 'px');
+        }, 500);
+          
+        
+      })
+    } 
     
     if (!window.requestAnimationFrame) {
       $(window).scroll(function (e) {
@@ -26,12 +30,29 @@ var progressbar =  $('.navigation'),
 
     function stickChapterBar () {
       var scrolltop = $(window).scrollTop();
-      progressbar.toggleClass('nav__progress-stuck', scrolltop > stickposition);
+      progressbar.toggleClass('navigation__orb-stuck', scrolltop > stickposition);
       secondarybar.toggleClass('nav__progress-stuck', scrolltop > stickposition);
       if (window.requestAnimationFrame) {
         window.requestAnimationFrame(stickChapterBar);
       }
-    }
+    };
+
+    function detectOrb () {
+        return $('#orb-banner').length
+    };
+
+    function addShorthandInOrbClasses () {
+      $('.section-navigation').addClass('section-navigation__orb');
+      $('.section-header').addClass('section-header__orb');
+      $('.menu-overlay').addClass('menu-overlay__orb');
+      $('.small-menu a').click(function (e){
+        e.stopImmediatePropagation();
+        $('.menu-overlay__orb').toggleClass('show-with-menu');
+        $('.section-navigation__orb').toggleClass('hide-when-small');
+        $('.section-header__orb').toggleClass('menu-active');
+        return false;
+      });
+    };
 
 </script>
 <!-- Orb scroll code - end -->

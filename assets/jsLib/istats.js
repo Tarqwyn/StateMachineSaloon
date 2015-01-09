@@ -1,4 +1,5 @@
 define(function() {
+    console.log('should be quiet');
     var exports = {},     // use name "exports" to make intention clear and also JSDoc work better
         istats = exports, // alias for internal use
 
