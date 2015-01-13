@@ -13,7 +13,8 @@
     "rimraf": "2.2.6",
     "gm": "latest",
     "async": "latest",
-    "css-parse": "latest"
+    "css-parse": "latest",
+    "lodash": "latest"
   },
   "window": {
     "toolbar": true,
