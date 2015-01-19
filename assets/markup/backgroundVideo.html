@@ -1,13 +1,13 @@
 <%
 var rand = Math.floor(Math.random() * 100000000);
 %>
-<div class="bbcnewsvj-background-video--<%= rand %>" style="width: 100%; height: 100%;"></div>
+<div id="bbcnewsvj-background-video--<%= rand %>" style="width: 100%; height: 100%;"></div>
 <script>
-require(['bump-3'],function ($) {
+require(empConfig, ['bump-3'], function (bump) {
    var settings = {
      product: 'background'
    };
-   var mp = $('.bbcnewsvj-background-video--<%= rand %>').player(settings);
-   mp.load('http://www.bbc.co.uk/iplayer/playlist/<%= mapId %>');
+   var mp = bump('#bbcnewsvj-background-video--<%= rand %>').player(settings);
+   mp.load('http://playlists.bbc.co.uk/news/<%= mapId %>A/playlist.sxml');
  }); 
 </script>
