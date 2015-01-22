@@ -106,6 +106,7 @@ var progressbar =  $('.navigation'),
 
 /*--------------Make Shorthand nav compatable with ORB-----------------*/
 
+
 .navigation {
   background-color: #2c2c2c;
   background-color: rgba(44,44,44,0.9);
@@ -123,7 +124,7 @@ var progressbar =  $('.navigation'),
   margin-right: auto;
   text-align: right;
   padding-left: 0;
-  background-image: url(/img/bbc_all_brands.png);
+  background-image: url(./static/img/news.png);
   background-repeat: no-repeat;
   background-position: 15px 13px;
 }
@@ -244,6 +245,9 @@ var progressbar =  $('.navigation'),
 }
 
 @media (max-width: 1100px) {
+  .navigation {
+    height: 1px!important;
+  }
   
   .idt__arabic .story .section-header.section-header__orb {
     background-position: 15px -71px;
@@ -382,7 +386,7 @@ var progressbar =  $('.navigation'),
 @media (max-width: 1100px) {
   .story .section-header.section-header__orb {
     position: static;
-    background-image: url(/img/bbc_all_brands.png);
+    background-image: url(./static/img/news.png);
     background-repeat: no-repeat;
     background-size: 240px;
     background-position: 15px 9px;
