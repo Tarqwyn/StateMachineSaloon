@@ -5,7 +5,8 @@ var rand = Math.floor(Math.random() * 100000000);
 <script>
 require(empConfig, ['bump-3'], function (bump) {
    var settings = {
-     product: 'background'
+     product: 'background',
+     deplayEmbed: true
    };
    var mp = bump('#bbcnewsvj-background-video--<%= rand %>').player(settings);
    mp.load('http://playlists.bbc.co.uk/news/<%= mapId %>A/playlist.sxml');
