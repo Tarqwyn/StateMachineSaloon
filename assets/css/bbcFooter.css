@@ -53,6 +53,7 @@
         font-weight: bold;
         width: 12em;
         float: left;
+        clear: left;
     }
 
     .bbc_shorthand_footer-credits dd {
