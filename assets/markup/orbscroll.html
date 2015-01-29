@@ -56,3 +56,383 @@ var progressbar =  $('.navigation'),
 
 </script>
 <!-- Orb scroll code - end -->
+<style>
+/*--------------Orb intergration-----------------*/
+
+.orb-nav-pri-container * {
+  position: static;
+}
+
+.orb-nav-pri .orb-nav-blocks a,
+.orb-nav-sec li a {
+  border-bottom: 0px;
+}
+
+.orb-nav-pri .orb-nav-id a {
+  min-height: 32px;
+}
+
+#orb-search-button {
+  -moz-box-sizing: initial;
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  float: right
+}
+.orb-nav-pri .orb-nav-blocks a,
+.orb-nav-pri .orb-nav-blocks img {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+
+.idt__arabic #orb-nav-more,
+.idt__persian #orb-nav-more {
+  max-width: 109px;
+}
+
+.idt__pashto #orb-nav-more,
+.idt__hindi #orb-nav-more,
+.idt__turkish #orb-nav-more,
+.idt__vietnamese #orb-nav-more {
+  max-width: 102px;
+}
+
+/* In the theme take it out */
+
+.story .section-title {
+  margin-top: 0px!important;
+}
+
+/*--------------Make Shorthand nav compatable with ORB-----------------*/
+
+
+.navigation {
+  background-color: #2c2c2c;
+  background-color: rgba(44,44,44,0.9);
+  height: 56px;
+}
+
+.story .section-navigation.section-navigation__orb {
+  height: 56px;
+  top: 0;
+  position: static;
+  background-color: transparent;
+  max-width: 976px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  padding-left: 0;
+  background-image: url(./static/img/news.png);
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+
+.idt__arabic .story .section-navigation.section-navigation__orb {
+  background-position: 887px -113px;
+  text-align: left;
+  direction: rtl;
+}
+
+.idt__persian .story .section-navigation.section-navigation__orb {
+  background-position: 892px -555px;
+  text-align: left;
+  direction: rtl;
+}
+
+.idt__mundo .story .section-navigation.section-navigation__orb {
+  background-position: 15px -931px;
+}
+
+.idt__russian .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1180px;
+}
+
+.idt__brasil .story .section-navigation.section-navigation__orb {
+  background-position: 15px -302px;
+}
+
+.idt__chinese .story .section-navigation.section-navigation__orb {
+  background-position: 15px -428px;
+}
+
+.idt__hindi .story .section-navigation.section-navigation__orb {
+  background-position: 15px -677px;
+}
+
+.idt__urdu .story .section-navigation.section-navigation__orb {
+  background-position: 909px -1812px;
+  text-align: left;
+  direction: rtl;
+}
+
+.idt__vietnamese .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1940px;
+}
+
+.idt__indonesian .story .section-navigation.section-navigation__orb {
+  background-position: 15px -742px;
+}
+.idt__turkish .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1560px;
+}
+
+.idt__ukrainian .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1752px;
+}
+
+.idt__azeri .story .section-navigation.section-navigation__orb {
+  background-position: 15px -175px;
+}
+
+.idt__hausa .story .section-navigation.section-navigation__orb {
+  background-position: 15px -616px;
+}
+
+.idt__kyrgyz .story .section-navigation.section-navigation__orb {
+  background-position: 15px -868px;
+}
+
+.idt__swahili .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1372px;
+}
+
+.idt__uzbek .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1874px;
+}
+
+.idt__bengali .story .section-navigation.section-navigation__orb {
+  background-position: 15px -239px;
+}
+
+.idt__burmese .story .section-navigation.section-navigation__orb {
+  background-position: 15px -365px;
+}
+
+.idt__french .story .section-navigation.section-navigation__orb {
+  background-position: 15px -48px;
+}
+
+.idt__nepali .story .section-navigation.section-navigation__orb {
+  background-position: 15px -995px;
+}
+
+.idt__pashto .story .section-navigation.section-navigation__orb {
+  background-position: 897px -1120px;
+  text-align: left;
+  direction: rtl;
+}
+
+.idt__somali .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1309px;
+}
+
+.idt__gahuza .story .section-navigation.section-navigation__orb {
+  background-position: 15px 13px;
+}
+
+.idt__sinhala .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1246px;
+}
+
+.idt__tajik .story .section-navigation.section-navigation__orb {
+  background-position: 15px 13px;
+}
+
+.idt__tamil .story .section-navigation.section-navigation__orb {
+  background-position: 15px -1433px;
+}
+
+@media (max-width: 1100px) {
+  .navigation {
+    height: 1px!important;
+  }
+  
+  .idt__arabic .story .section-header.section-header__orb {
+    background-position: 15px -71px;
+  }
+
+  .idt__persian .story .section-header.section-header__orb {
+    background-position: 15px -358px;
+  }
+
+  .idt__mundo .story .section-header.section-header__orb {
+    background-position: 15px -601px;
+  }
+
+  .idt__russian .story .section-header.section-header__orb {
+    background-position: 15px -762px;
+  }
+
+  .idt__brasil .story .section-header.section-header__orb {
+    background-position: 15px -195px;
+  }
+
+  .idt__chinese .story .section-header.section-header__orb {
+    background-position: 15px -276px;
+  }
+
+  .idt__hindi .story .section-header.section-header__orb {
+    background-position: 15px -437px;
+  }
+
+  .idt__urdu .story .section-header.section-header__orb {
+    background-position: 15px -1170px;
+  }
+
+  .idt__vietnamese .story .section-header.section-header__orb {
+    background-position: 15px -1253px;
+  } 
+
+  .idt__indonesian .story .section-header.section-header__orb {
+    background-position: 15px -479px;
+  }
+
+  .idt__turkish .story .section-header.section-header__orb {
+    background-position: 15px -1007px;
+  }
+
+  .idt__ukrainian .story .section-header.section-header__orb {
+    background-position: 15px -1131px;
+  }
+
+  .idt__azeri .story .section-header.section-header__orb {
+    background-position: 15px -113px;
+  }
+
+  .idt__hausa .story .section-header.section-header__orb {
+    background-position: 15px -398px;
+  }
+
+  .idt__kyrgyz .story .section-header.section-header__orb {
+    background-position: 15px -561px;
+  }
+
+  .idt__swahili .story .section-header.section-header__orb {
+    background-position: 15px -886px;
+  }
+  
+  .idt__uzbek .story .section-header.section-header__orb {
+    background-position: 15px -1210px;
+  }
+
+  .idt__bengali .story .section-header.section-header__orb {
+    background-position: 15px -154px;
+  }
+
+  .idt__burmese .story .section-header.section-header__orb {
+    background-position: 15px -236px;
+  }
+
+  .idt__french .story .section-header.section-header__orb {
+    background-position: 15px -31px;
+  }
+
+  .idt__nepali .story .section-header.section-header__orb {
+    background-position: 15px -643px;
+  }
+
+  .idt__pashto .story .section-header.section-header__orb {
+    background-position: 15px -723px;
+  }
+
+  .idt__somali .story .section-header.section-header__orb {
+    background-position: 15px -845px;
+  }
+
+  .idt__gahuza .story .section-header.section-header__orb {
+    background-position: 15px 9px;
+  }
+
+  .idt__sinhala .story .section-header.section-header__orb {
+    background-position: 15px -805px;
+  }
+
+  .idt__tajik .story .section-header.section-header__orb {
+    background-position: 15px 9px;
+  }
+
+  .idt__tamil .story .section-header.section-header__orb {
+    background-position: 15px -925px;
+  } 
+}
+
+
+.story .section-navigation.section-navigation__orb a {
+  font-size: 23px;
+  height: 56px;
+  padding: 18px 1.1% 0;
+}
+
+.navigation__orb-stuck {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.story .section-navigation.section-navigation__orb a.active, 
+.story .section-navigation.section-navigation__orb a:visited.active {
+  border-bottom: 4px solid #cc0101;
+}
+
+@media (max-width: 1100px) {
+  .story .section-navigation.section-navigation__orb a.active, 
+  .story .section-navigation.section-navigation__orb a:visited.active {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+@media (max-width: 1100px) {
+  .story .section-header.section-header__orb {
+    position: static;
+    background-image: url(./static/img/news.png);
+    background-repeat: no-repeat;
+    background-size: 240px;
+    background-position: 15px 9px;
+  }
+
+  .story .section-navigation.section-navigation__orb {
+    position: fixed;
+    top: 78px;
+    background-image: none;
+    height: auto;
+    text-align: left;
+  }
+  .idt__arabic .story .section-navigation.section-navigation__orb,
+  .idt__persian .story .section-navigation.section-navigation__orb,
+  .idt__urdu .story .section-navigation.section-navigation__orb,
+  .idt__pashto .story .section-navigation.section-navigation__orb {
+    text-align: right;
+  }
+
+  .navigation .menu-overlay.menu-overlay__orb {
+    position: absolute;
+    height: 1200px;
+    margin-top: 1px;
+  }
+}
+
+@media (max-width: 624px) {
+  .story .section-header {
+    top: 32px!important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navigation {
+    background-color: transparent;
+  }
+}
+
+.header-logo-panel img {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .story .section-header.nav__progress-stuck {
+    top: 0px!important;
+    position: fixed;
+  }
+}
+</style>

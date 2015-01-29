@@ -25,7 +25,7 @@ var _initialiseModule = function () {
 };
 
 model = new NSShareModel({
-    message: "Arms wide open: The story behind Rio's Christ the Redeemer statue, via @BBCNewsMagazine",
+    message: "Arms wide open: The story behind Rio's Christ the Redeemer statue",
     desc: "Shared via BBC News Magazine",
     image: "http://www.bbc.co.uk/news/special/2014/newsspec_6954/static/img/mbaye225.jpg"
 });

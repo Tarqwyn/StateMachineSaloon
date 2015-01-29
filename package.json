@@ -5,15 +5,17 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "cheerio": "0.13.1",
-    "socket.io": "latest",
-    "connect": "latest",
-    "open": "latest",
-    "ncp": "0.5.0",
-    "rimraf": "2.2.6",
-    "gm": "latest",
-    "async": "latest",
-    "css-parse": "latest"
+    "async":     "latest",
+    "cheerio":   "0.13.1",
+    "connect":   "latest",
+    "css-parse": "2.0.0",
+    "fs-extra":  "latest",
+    "gm":        "latest",
+    "lodash":    "latest",
+    "ncp":       "0.5.0",
+    "open":      "latest",
+    "rimraf":    "2.2.6",
+    "socket.io": "latest"
   },
   "window": {
     "toolbar": true,

@@ -259,9 +259,7 @@ define(['bootstrap'], function (news) {
     */
     NSShareModel.prototype.twitterShareTarget = function () {
         return TWITTER_URL + // Twitter API
-        '?text=' + this.getShareMessage() + // Custom share message
-        // ' ' + this.getHashTags() + // Hashtags string
-        ' ' + STORY_PAGE_URL; // URL storypage
+        '?text=' + this.getShareMessage();
     };
     /**
     * Returns Email share request URL with appropriate callback
