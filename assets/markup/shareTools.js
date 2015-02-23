@@ -25,9 +25,9 @@ var _initialiseModule = function () {
 };
 
 model = new NSShareModel({
-    message: "Chilling story - the icy ingenuity of the men who changed the planet forever by cooling us down #BBCRicherWorld - http://www.bbc.co.uk/news/magazine-31149328",
+    message: "Waiting for the sea - the rusting wrecks in a desert that may fill up again with water - http://www.bbc.co.uk/news/magazine-31588720",
     desc: "Shared via BBC News Magazine",
-    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10193/media/share_image.jpg"
+    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10315/media/share_image.jpg"
 });
 model.storyPageUrl = window.document.location.href;
 view = new NSShareView('#ns_share_module');

@@ -12,5 +12,11 @@
 	},
 	"10193": {
 		"icetest1": "magazine-31441452"
+	},
+	"10315": {
+		"shipwreck_mp4": "magazine-31540079",
+		"boat_mp4": "magazine-31540080",		
+		"dam_mp4": "magazine-31540081",
+		"shells_mp4": "magazine-31540082"
 	}
 }
