@@ -9,6 +9,7 @@
     margin-right: auto;
     padding: 0 1em;
     position:static;
+    overflow: hidden;
 }
 
 .bbc_shorthand_footer * {
