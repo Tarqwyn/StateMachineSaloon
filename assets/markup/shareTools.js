@@ -25,9 +25,9 @@ var _initialiseModule = function () {
 };
 
 model = new NSShareModel({
-    message: "Я прочел эту статью на Би-би-си и решил поделиться с вами. - http://bit.ly/bbcrussian_aral_sea",
-    desc: "Прочитано на Би-би-си",
-    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10315/media/share_image.jpg"
+    message: "Panorama's Clive Myrie looks at 'What Britain Wants' http://www.bbc.co.uk/news/magazine-31817307",
+    desc: "A decent job with prospects",
+    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10423/media/si_panorama.jpg"
 });
 model.storyPageUrl = window.document.location.href;
 view = new NSShareView('#ns_share_module');
