@@ -37,6 +37,7 @@
     font-weight: bold;
     font-size: 1.4em;
     border-bottom: 1px solid black;
+    font-family: inherit;
 }
 
 .bbc_shorthand_footer div {

@@ -25,9 +25,9 @@ var _initialiseModule = function () {
 };
 
 model = new NSShareModel({
-    message: "Panorama's Clive Myrie looks at 'What Britain Wants' http://www.bbc.co.uk/news/magazine-31817307",
-    desc: "A decent job with prospects",
-    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10423/media/si_panorama.jpg"
+    message: "The Art of Influence: How the Taliban were driven from a strategic Afghan town - a general's story http://bbc.in/1MdLigg",
+    desc: "Shared via BBC News Magazine",
+    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_12363/static/img/share_image.jpg"
 });
 model.storyPageUrl = window.document.location.href;
 view = new NSShareView('#ns_share_module');
