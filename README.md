@@ -9,19 +9,21 @@ https://docs.google.com/document/d/1J3mlxn9jKu32MhIl9mzZe1yl3JKFka8cB1SbTlteSzU/
 
 The producers guide explains how to construct pieces of content like the bbc quotes and embedding bbc video (smp) that this tool use to output the final product
 
-## Staring point
+## Starting point
 
 - Clone the repository
 
-- In the project open the file 'assets/markup/bbcFooter.html' and edit it to reflect the new story details
+- cd into the repository folder and run `npm install`
 
-- From terminal cd into the project directory and type:
+- In the repo folder, edit the file `assets/markup/bbcFooter.html` to reflect the new story's details. There are three main sections: credits, share links, and More from Magazine links. Your producer will likely provide the text, links and images for these.
 
-*open node-webkit.app*
+- In the repo folder, edit the file `assets/markup/js/shareTools.js`. Edit the message, description and share image URL
 
-OR in finder click on node-webkit.app
+- In the repo folder, run `open node-webkit.app` or double-click on node-webkit.app in Finder
 
 - Follow the instructions
+
+More detailed instructions on how to use the tool can be found on [Confluence](https://confluence.dev.bbc.co.uk/display/newsspec/Post-processing+Shorthand+articles)
 
 ### Things the tool does
 
@@ -34,52 +36,45 @@ OR in finder click on node-webkit.app
 - Copy files into the output directory
 
 - Prompt for setable options:
-	
-	. remove google analytics
-
-	. add istats
-
-	. add chartbeat
-
-	. add bbc (smp) video
-
-	. add bbc quotes
-
-	. add bbc footer
-
-	. add share tools
-
+  - remove google analytics
+  - add istats
+  - add chartbeat
+  - add bbc (smp) video
+  - add bbc quotes
+  - add bbc footer
+  - add share tools
+  
 - Run selected tasks
 
 ## Instructions for running the tool with background videos
 
-* Editorial staff can add background videos into shorthand and export as they did previously.
+- Editorial staff can add background videos into shorthand and export as they did previously.
 
-* Editorial staff also have to upload the videos into jupiter and publish them as MAP pages.  Once they have done this they must tell you what pages they have been published to.
+- Editorial staff also have to upload the videos into jupiter and publish them as MAP pages.  Once they have done this they must tell you what pages they have been published to.
 
-* Developer visits each map page and uses dev tools to work out what the MAP ID value is for each video.  For example if you go to the page `http://www.bbc.co.uk/news/magazine-30719140` and inspect the video player, you'll find the element `div.player-wrapper`.  The child element `div#media-asset-page-video` has the attribute `data-asset-id` with the value `30719140`, this is the MAP ID for the video.  Take a copy of this value from each MAP page for the background videos you want to appear in the shorthand.
+- Developer visits each map page and uses dev tools to work out what the MAP ID value is for each video.  For example if you go to the page `http://www.bbc.co.uk/news/magazine-30719140` and inspect the video player, you'll find the element `div.player-wrapper`.  The child element `div#media-asset-page-video` has the attribute `data-asset-id` with the value `30719140`, this is the MAP ID for the video.  Take a copy of this value from each MAP page for the background videos you want to appear in the shorthand.
 
-* Developer opens the file `assets/config/backgroundVideoMapping.json` and adds a new entry.  For Example the following entry is for a project with the JIRA ticket number `0000`:
+- Developer opens the file `assets/config/backgroundVideoMapping.json` and adds a new entry.  For Example the following entry is for a project with the JIRA ticket number `0000`:
 
-  ```
+  ```json
   {
-	"0000": {
-		"chapterheadopeningimage_1": "30719140"
-   	}
- }
- ```
+    "0000": {
+      "chapterheadopeningimage_1": "30719140"
+    }
+  }
+  ```
 
- You need to add a row in the entry for each background video.  If you inspect each background video in the shorthand HTML file, you'll find video elements like this:
+  You need to add a row in the entry for each background video.  If you inspect each background video in the shorthand HTML file, you'll find video elements like this:
 
- ```
- <video autoplay="autoplay" loop="loop" muted="muted" data-autoscale="cover" data-autoscale-content-ratio="1.77777777778">
+  ```html
+  <video autoplay="autoplay" loop="loop" muted="muted" data-autoscale="cover" data-autoscale-content-ratio="1.77777777778">
     <source src="./media/chapterheadopeningimage_1.mp4" type="video/mp4">
     <source src="./media/chapterheadopeningimage.webmhd.webm" type="video/webm">
- </video>
- ```
+  </video>
+  ```
 
- Using the JSON file we want to match the name of the MP4 source video file with the MAP ID that we'll replace it with.  Using the examples above this means that the source named `chapterheadopeningimage_1` will be replaced with an SMP player using the MAP ID `30719140`.
+  Using the JSON file we want to match the name of the MP4 source video file with the MAP ID that we'll replace it with.  Using the examples above this means that the source named `chapterheadopeningimage_1` will be replaced with an SMP player using the MAP ID `30719140`.
 
-* Run the shorthand post processing tool.  When the tool gets to the video processing part, you'll be asked for the JIRA ticket number, type in just the 4 digit id.
+- Run the shorthand post processing tool.  When the tool gets to the video processing part, you'll be asked for the JIRA ticket number, type in just the 4 digit id.
 
-* That should be it.
+- That should be it.
