@@ -1,8 +1,7 @@
 /* ------------------------------------------------------------------------- Footer panel */
 
 .bbc_shorthand_footer {
-    /* Remove these lines if needed */
-    font-family: Arial, serif;
+    /* font-family: Arial, serif; what is this */
     font-size: 14px;
     max-width: 944px;
     margin-left: auto;
