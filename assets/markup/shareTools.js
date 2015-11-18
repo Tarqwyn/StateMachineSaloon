@@ -25,9 +25,9 @@ var _initialiseModule = function () {
 };
 
 model = new NSShareModel({
-    message: "Waiting for the sea - the rusting wrecks in a desert that may fill up again with water - http://www.bbc.co.uk/news/magazine-31588720",
+    message: "{{ SHARE_MESSAGE }} - {{ SHARE_URL }}",
     desc: "Shared via BBC News Magazine",
-    image: "http://news.bbcimg.co.uk/news/special/2015/newsspec_10315/media/share_image.jpg"
+    image: "{{ SHARE_IMG }}"
 });
 model.storyPageUrl = window.document.location.href;
 view = new NSShareView('#ns_share_module');
