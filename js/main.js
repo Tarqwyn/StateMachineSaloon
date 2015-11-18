@@ -52,6 +52,7 @@ for (a = 0; a < arrLength; a++) {
 * ACTIONS
 ------------------------------------------------------------------*/
 function throwError(msg) {
+	console.trace();
 	console.log("ERROR: ", msg);
 }
 
