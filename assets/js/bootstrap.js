@@ -4,9 +4,10 @@
 // Here we could define other dependencies that may be require specifically by our application
 // for example rapheal or a pubsub module..
 define([
+	'jquery-1.9',
     'lib/event_emitter'
 ], function (
-    // jquery,
+    $,
     EventEmitter
 ) {
     var news = {
