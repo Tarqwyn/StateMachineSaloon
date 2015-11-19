@@ -1,14 +1,14 @@
 /* ------------------------------------------------------------------------- Footer panel */
 
 .bbc_shorthand_footer {
-    /* Remove these lines if needed */
-    font-family: Arial, serif;
+    /* font-family: Arial, serif; what is this */
     font-size: 14px;
     max-width: 944px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1em;
     position:static;
+    overflow: hidden;
 }
 
 .bbc_shorthand_footer * {
@@ -37,6 +37,7 @@
     font-weight: bold;
     font-size: 1.4em;
     border-bottom: 1px solid black;
+    font-family: inherit;
 }
 
 .bbc_shorthand_footer div {
