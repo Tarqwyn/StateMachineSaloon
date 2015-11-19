@@ -1,11 +1,12 @@
 {
+	"buildVersion":           "1.10",
 	"shareUrl":               "http://bbc.in/1WZhU5Z",
 	"shareMessage":           "The Mochileros of cocaine valley - young backpackers risking their lives @bbcnewsmagazine",
-	"shareImg":               "http://www.stage.bbc.co.uk/news/special/2015/newsspec_12949/static/img/share.jpg",
+	"shareImg":               "http://www.bbc.co.uk/news/special/2015/newsspec_12949/static/img/share.jpg",
 	"backgroundVideoMapping": {},
 	"year":                   "2015",
-	"env":                    "stage",
-	"inputFolderPath":        "/Users/maslet02/Downloads/story-5802-20151118005345",
+	"env":                    "live",
+	"inputFolderPath":        "/Users/maslet02/Downloads/story-5802-20151120002640",
 	"outputFolderPath":       "/Users/maslet02/Sites/bbc/news/special/2015/newsspec_12949",
 	"chartbeatStoryName":     "123456",
 	"moreReads": [{
