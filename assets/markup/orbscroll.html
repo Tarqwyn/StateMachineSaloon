@@ -1,9 +1,10 @@
 <!-- Orb scroll code - start -->
 <script type="text/javascript">
-var progressbar =  $('.navigation'),
-    secondarybar = $('.section-header'),
-    navmore,
-    stickposition = 38;
+  require(['jquery-1'], function($) {
+    var progressbar =  $('.navigation'),
+      secondarybar = $('.section-header'),
+      navmore,
+      stickposition = 38;
 
     if (detectOrb()) {
       addShorthandInOrbClasses();
@@ -53,7 +54,7 @@ var progressbar =  $('.navigation'),
         return false;
       });
     };
-
+  });
 </script>
 <!-- Orb scroll code - end -->
 <style>
