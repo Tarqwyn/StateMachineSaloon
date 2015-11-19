@@ -13,7 +13,11 @@ The producers guide explains how to construct pieces of content like the bbc quo
 
 - Clone the repository
 
-- In the project open the file 'assets/markup/bbcFooter.html' and edit it to reflect the new story details
+- Create a new config file in `assets/config`.  Name it `<JIRA_NUMBER>.json`.
+
+- Add all the required values.  Use an existing config for an example of what to put into it.
+
+- Edit the file `node_modules/model.js` by changing the variable `jiraNumber` at the beginning of the file to the jira number for this new shorthand.
 
 - From terminal cd into the project directory and type:
 
