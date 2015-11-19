@@ -1,9 +1,21 @@
 {
-	"shareUrl":     "",
-	"shareMessage": "The Mochileros of cocaine valley - young backpackers risking their lives @bbcnewsmagazine",
+	"shareUrl":               "http://bbc.in/1WZhU5Z",
+	"shareMessage":           "The Mochileros of cocaine valley - young backpackers risking their lives @bbcnewsmagazine",
+	"shareImg":               "http://www.stage.bbc.co.uk/news/special/2015/newsspec_12949/static/img/share.jpg",
 	"backgroundVideoMapping": {},
-	"year":       "2015",
-	"env":        "stage",
-	"inputFolderPath": "/Users/maslet02/Downloads/story-5802-20151118005345",
-	"outputFolderPath": "/Users/maslet02/Sites/bbc/news/special/2015/newsspec_12949"
+	"year":                   "2015",
+	"env":                    "stage",
+	"inputFolderPath":        "/Users/maslet02/Downloads/story-5802-20151118005345",
+	"outputFolderPath":       "/Users/maslet02/Sites/bbc/news/special/2015/newsspec_12949",
+	"chartbeatStoryName":     "123456",
+	"moreReads": [{
+		"text": "Fishing and ultrviolence: The propagandists of the so called Islamic State",
+		"href": "http://www.bbc.co.uk/news/resources/idt-88492697-b674-4c69-8426-3edd17b7daed"
+	},{
+		"text": "The Golden Dream: A promise of untold wealth that came with an ominous warning",
+		"href": "http://www.bbc.co.uk/news/resources/idt-27efd9d2-7932-44ac-ad0d-6b3fee4c9515"
+	},{
+		"text": "London-centric: How has the UK capital become so powerful?",
+		"href": "http://www.bbc.co.uk/news/resources/idt-248d9ac7-9784-4769-936a-8d3b435857a8"
+	}]
 }
