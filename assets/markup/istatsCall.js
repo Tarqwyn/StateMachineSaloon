@@ -1,4 +1,5 @@
 window.ga = {};
+/*
 (function () {
     'use strict';
     $(function () {
@@ -34,3 +35,4 @@ window.ga = {};
             })
         })
     })();
+*/
