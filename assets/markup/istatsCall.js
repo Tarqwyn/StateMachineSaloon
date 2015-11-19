@@ -1,3 +1,4 @@
+window.ga = {};
 (function () {
     'use strict';
     $(function () {
