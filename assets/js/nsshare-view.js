@@ -54,7 +54,7 @@ define(['bootstrap'], function (news) {
 
     NSShareView.prototype.buildShareModule = function (model) {
         //this.sharemodule.on('click', '.share__tool', requestShare);
-        $('.share__tool').click(requestShare);
+        news.$('.share__tool').click(requestShare);
 
         // inform controller
         this.viewReady = true;
